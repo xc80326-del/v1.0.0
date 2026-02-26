@@ -1,0 +1,156 @@
+opencode：
+
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "myprovider": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "modelscope",
+      "options": {
+        "baseURL": "https://yunyi.cfd/codex/v1",
+        "apiKey": "TCR50JQE-1Z1Q-24K7-XMHT-CCJGW71N5Z39"
+      },
+      "models": {
+        "gpt-5.2": {
+          "name": "gpt-5.2"
+        }
+      }
+    },
+    "yunyi": {
+      "name": "yunyi",
+      "npm": "@ai-sdk/openai",
+      "api": "responses",
+      "options": {
+        "baseURL": "https://yunyi.cfd/codex",
+        "apiKey": "TCR50JQE-1Z1Q-24K7-XMHT-CCJGW71N5Z39",
+        "disableMaxOutputTokens": true,
+        "providerOptions": {
+          "openai": {
+            "store": false
+          }
+        }
+      },
+      "models": {
+        "gpt-5.2-codex": {
+          "name": "gpt-5.2-codex",
+          "reasoning": true,
+          "options": {
+            "store": false
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "variants": {
+            "low": {
+              "reasoningEffort": "low",
+              "textVerbosity": "medium",
+              "reasoningSummary": "auto"
+            },
+            "medium": {
+              "reasoningEffort": "medium",
+              "textVerbosity": "medium",
+              "reasoningSummary": "auto"
+            },
+            "high": {
+              "reasoningEffort": "high",
+              "textVerbosity": "medium",
+              "reasoningSummary": "auto"
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh",
+              "textVerbosity": "medium",
+              "reasoningSummary": "auto"
+            }
+          }
+        },
+        "gpt-5.2": {
+          "name": "gpt-5.2",
+          "reasoning": true,
+          "options": {
+            "store": false
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "variants": {
+            "low": {
+              "reasoningEffort": "low",
+              "textVerbosity": "medium",
+              "reasoningSummary": "auto"
+            },
+            "medium": {
+              "reasoningEffort": "medium",
+              "textVerbosity": "medium",
+              "reasoningSummary": "auto"
+            },
+            "high": {
+              "reasoningEffort": "high",
+              "textVerbosity": "medium",
+              "reasoningSummary": "auto"
+            },
+            "xhigh": {
+              "reasoningEffort": "xhigh",
+              "textVerbosity": "medium",
+              "reasoningSummary": "auto"
+            }
+          }
+        }
+      }
+    },
+    "claude-yunyi": {
+      "npm": "@ai-sdk/anthropic",
+      "name": "claude-yunyi",
+      "options": {
+        "baseURL": "https://yunyi.rdzhvip.com/claude/v1",
+        "apiKey": "Z5K0AEN1-BF5G-AREY-SG5Q-UE6BRRDX9J04"
+      },
+      "models": {
+        "claude-opus-4-5": {
+          "name": "claude-opus-4-6"
+        },
+        "claude-sonnet-4-5": {
+          "name": "claude-sonnet-4-5"
+        },
+        "claude-haiku-4-5": {
+          "name": "claude-haiku-4-5"
+        }
+      }
+    },
+    "anthropic": {
+      "name": "yunyi-claude",
+      "npm": "@ai-sdk/anthropic",
+      "options": {
+        "baseURL": "https://yunyi.rdzhvip.com/claude/v1",
+        "apiKey": "Z5K0AEN1-BF5G-AREY-SG5Q-UE6BRRDX9J04"
+      }
+    }
+  },
+  "model": "anthropic/claude-opus-4-6"
+}
+
+
+
+
+claudecode：
+
+
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://yunyi.rdzhvip.com/claude",
+    "ANTHROPIC_AUTH_TOKEN": "Z5K0AEN1-BF5G-AREY-SG5Q-UE6BRRDX9J04",
+    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "80"
+  },
+  "model": "opus[1m]"
+}
